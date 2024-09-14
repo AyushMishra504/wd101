@@ -26,6 +26,10 @@ const saveUserForm = (event) => {
   newRow.insertCell(3).textContent = dob;
   newRow.insertCell(4).textContent = acceptTerms;
 
+  const loadEntries = () => {
+    const storedEntries = JSON.parse(localStorage.getItem("user-entries")) || [];
+    storedEntries.forEach(entry => addRowToTable(entry));
+
   userentries.push(entry);
   localStorage.setItem("user-entries", JSON.stringify(userentries));
 };
