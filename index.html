@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"
+        crossorigin="anonymous">         
+    <title>Registration Form</title>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center flex-col">
+    
+    <form class="max-w-2xl w-full mx-auto bg-white p-8 shadow-lg rounded-lg mb-8" id="form">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Register</h2>        
+        <div class="mb-4 flex items-center">
+            <label for="name" class="block text-gray-700 font-medium w-1/4">Name</label>
+            <input type="text" id="name" name="name"
+                class="w-3/4 px-4 py-2 border rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                placeholder="Enter name" required>
+        </div>
+        <div class="mb-4 flex items-center">
+            <label for="email" class="block text-gray-700 font-medium w-1/4">Email</label>
+            <input type="email" id="email" name="email"
+                class="w-3/4 px-4 py-2 border rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+               placeholder="Enter Email ID" required>
+        </div>
+        <div class="mb-4 flex items-center">
+            <label for="password" class="block text-gray-700 font-medium w-1/4">Password</label>
+            <input type="password" id="password" name="password"
+                class="w-3/4 px-4 py-2 border rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                placeholder="Enter Password" required>
+        </div>
+        <div class="mb-4 flex items-center">
+            <label for="dob" class="block text-gray-700 font-medium w-1/4">Date of Birth</label>
+            <input type="date" id="dob" name="dob"
+                class="w-3/4 px-4 py-2 border rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Enter Date of Birth"  min="1969-09-14" max="2006-09-14" required>
+        </div>
+        <div class="mb-4 flex items-center">
+            <input type="checkbox" id="acceptTerms" name="acceptTerms"
+                class="mr-2 h-5 w-5 text-blue-500 border-gray-300 rounded" required>
+            <label for="acceptTerms" class="text-gray-700 font-medium">Accept Terms & Conditions</label>
+        </div>
+        <div class="mb-4">
+            <button type="submit"
+                class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+                Submit
+            </button>
+        </div>
+    </form>
+    <div class="max-w-2xl w-full mx-auto bg-white p-8 shadow-lg rounded-lg">
+        <h2 class="text-xl font-bold mb-4 text-gray-800">Entries</h2>
+        <table class="min-w-full table-auto border-collapse" id="table">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class=" px-4 py-2 text-gray-600">Name</th>
+                    <th class="border px-4 py-2 text-gray-600">Email</th>
+                    <th class="border px-4 py-2 text-gray-600">Password</th>
+                    <th class="border px-4 py-2 text-gray-600">Date of Birth</th>
+                    <th class="border px-4 py-2 text-gray-600">Accept Terms</th>
+                </tr>
+            </thead>
+            <tbody class="border px-4 py-2 text-center text-gray-600"></tbody>
+        </table>
+    </div>
+</body>
+<script src="index.js"> </script>
+</html>
